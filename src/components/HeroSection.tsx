@@ -45,7 +45,7 @@ const HeroSection = () => {
         
         {/* VSL Placeholder */}
         <div id="video-section" className="mt-20 max-w-4xl mx-auto fade-in">
-          <div className="relative bg-section border-2 border-dashed border-border-light rounded-xl p-20 text-center" style={{ minHeight: '550px' }}>
+          <div className="relative bg-section border-2 border-dashed border-border-light rounded-xl p-20 text-center" style={{ minHeight: '350px' }}>
             <div className="flex flex-col items-center justify-center h-full">
               <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mb-8">
                 <Play className="w-10 h-10 text-primary-foreground ml-1" />

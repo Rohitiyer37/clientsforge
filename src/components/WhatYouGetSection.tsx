@@ -1,9 +1,6 @@
-import { Bot, GraduationCap, Users, Database } from "lucide-react";
-
 const WhatYouGetSection = () => {
   const features = [
     {
-      icon: Bot,
       title: "AI Systems & Automations",
       items: [
         "Workflows using Notion, n8n, Google Sheets",
@@ -12,16 +9,14 @@ const WhatYouGetSection = () => {
       ]
     },
     {
-      icon: GraduationCap,
       title: "Trainings",
       items: [
         "On-demand modules",
         "Strategy, hooks, offer-to-content alignment",
-        "Charlie Morgan-style niche domination"
+        "Advanced content strategy and positioning"
       ]
     },
     {
-      icon: Users,
       title: "One-on-One Support",
       items: [
         "Weekly consulting calls with Rohit",
@@ -30,7 +25,6 @@ const WhatYouGetSection = () => {
       ]
     },
     {
-      icon: Database,
       title: "Dashboards & Resources",
       items: [
         "Notion planners and SOPs",
@@ -49,38 +43,30 @@ const WhatYouGetSection = () => {
           </h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => {
-            const IconComponent = feature.icon;
-            return (
-              <div 
-                key={index}
-                className="bg-card border border-card-border rounded-lg p-6 card-hover fade-in"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                    <IconComponent className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground font-dm-serif">
-                    {feature.title}
-                  </h3>
-                </div>
-                
-                <ul className="space-y-2">
-                  {feature.items.map((item, itemIndex) => (
-                    <li 
-                      key={itemIndex} 
-                      className="text-foreground-secondary flex items-start"
-                    >
-                      <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
+        <div className="max-w-4xl mx-auto space-y-8">
+          {features.map((feature, index) => (
+            <div 
+              key={index}
+              className="bg-card border border-card-border rounded-lg p-8 card-hover fade-in"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              <h3 className="text-2xl font-bold text-foreground font-dm-serif mb-4">
+                {feature.title}
+              </h3>
+              
+              <ul className="space-y-3">
+                {feature.items.map((item, itemIndex) => (
+                  <li 
+                    key={itemIndex} 
+                    className="text-lg text-foreground-secondary flex items-start"
+                  >
+                    <span className="w-2 h-2 bg-primary rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>
