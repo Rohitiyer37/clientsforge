@@ -45,12 +45,12 @@ const HeroSection = () => {
         
         {/* VSL Placeholder */}
         <div id="video-section" className="mt-20 max-w-4xl mx-auto fade-in">
-          <div className="relative bg-section border-2 border-dashed border-border-light rounded-xl p-16 text-center">
-            <div className="flex flex-col items-center justify-center">
-              <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-6">
-                <Play className="w-8 h-8 text-primary-foreground ml-1" />
+          <div className="relative bg-section border-2 border-dashed border-border-light rounded-xl p-20 text-center" style={{ minHeight: '550px' }}>
+            <div className="flex flex-col items-center justify-center h-full">
+              <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mb-8">
+                <Play className="w-10 h-10 text-primary-foreground ml-1" />
               </div>
-              <p className="text-2xl font-semibold text-foreground-secondary">
+              <p className="text-3xl font-semibold text-foreground-secondary">
                 Video Coming Soon
               </p>
             </div>

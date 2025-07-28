@@ -11,7 +11,7 @@ const WhoThisIsForSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-background">
+    <section id="about" className="section-padding bg-background">
       <div className="section-container">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-dm-serif text-foreground mb-16 fade-in">

@@ -1,6 +1,6 @@
 const TestimonialsSection = () => {
   return (
-    <section className="section-padding bg-section">
+    <section id="testimonials" className="section-padding bg-section">
       <div className="section-container">
         <div className="text-center">
           <h2 className="text-4xl sm:text-5xl font-dm-serif text-foreground mb-8 fade-in">

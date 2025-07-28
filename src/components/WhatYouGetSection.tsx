@@ -41,7 +41,7 @@ const WhatYouGetSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-section">
+    <section id="services" className="section-padding bg-section">
       <div className="section-container">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-dm-serif text-foreground mb-6 fade-in">

@@ -35,6 +35,7 @@ export default {
 				},
 				section: {
 					DEFAULT: 'hsl(var(--section-bg))',
+					alt: 'hsl(var(--section-bg-alt))',
 					foreground: 'hsl(var(--section-fg))'
 				},
 				card: {

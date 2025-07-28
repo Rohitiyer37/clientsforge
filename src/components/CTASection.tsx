@@ -7,7 +7,7 @@ const CTASection = () => {
   };
 
   return (
-    <section className="section-padding bg-background">
+    <section id="contact" className="section-padding bg-background">
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-dm-serif text-foreground mb-8 fade-in">
