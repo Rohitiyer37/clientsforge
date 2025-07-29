@@ -8,26 +8,26 @@ const TestimonialsSection = () => {
           </h2>
           
           {/* Results Images */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="max-w-2xl mx-auto space-y-8 mb-16">
             <div className="bg-card border border-card-border rounded-lg p-8 fade-in">
               <div className="w-full h-48 bg-section rounded mb-4 flex items-center justify-center">
                 <p className="text-foreground-secondary font-semibold">200+ Calls Booked</p>
               </div>
-              <p className="text-sm text-foreground-secondary">Client Results Screenshot</p>
+              <p className="text-sm text-foreground-secondary text-center">Client Results Screenshot</p>
             </div>
             
             <div className="bg-card border border-card-border rounded-lg p-8 fade-in" style={{ animationDelay: '150ms' }}>
               <div className="w-full h-48 bg-section rounded mb-4 flex items-center justify-center">
                 <p className="text-foreground-secondary font-semibold">YouTube Results</p>
               </div>
-              <p className="text-sm text-foreground-secondary">YouTube Growth Screenshot</p>
+              <p className="text-sm text-foreground-secondary text-center">YouTube Growth Screenshot</p>
             </div>
             
             <div className="bg-card border border-card-border rounded-lg p-8 fade-in" style={{ animationDelay: '300ms' }}>
               <div className="w-full h-48 bg-section rounded mb-4 flex items-center justify-center">
                 <p className="text-foreground-secondary font-semibold">Instagram Results</p>
               </div>
-              <p className="text-sm text-foreground-secondary">Instagram Growth Screenshot</p>
+              <p className="text-sm text-foreground-secondary text-center">Instagram Growth Screenshot</p>
             </div>
           </div>
           

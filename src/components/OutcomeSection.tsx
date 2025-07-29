@@ -1,9 +1,9 @@
 const OutcomeSection = () => {
   const outcomes = [
-    "A fully built AI-powered content engine",
-    "Predictable inbound leads and booked calls", 
-    "Content that converts, not just looks good",
-    "Time saved, confidence gained"
+    "A content system that works as hard as you do",
+    "Predictable lead flow from your personal brand", 
+    "Content that attracts your ideal clients automatically",
+    "Complete freedom from content creation overwhelm"
   ];
 
   return (

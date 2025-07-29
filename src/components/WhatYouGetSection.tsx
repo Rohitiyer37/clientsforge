@@ -3,37 +3,33 @@ const WhatYouGetSection = () => {
     {
       title: "AI Systems & Automations",
       items: [
-        "Custom-built workflows to generate hooks, scripts, posts, and carousels",
-        "Automations built on tools like n8n, Notion, Google Sheets, etc.",
-        "Pre-built prompt stacks that turn ideas → scripts → scheduled content",
-        "Templates & workflows that remove 90% of the manual work"
+        "Custom workflows for hooks, scripts, and posts",
+        "Automations using n8n, Notion, Google Sheets",
+        "Prompt stacks and templates"
       ]
     },
     {
       title: "Trainings",
       items: [
-        "On-demand video modules showing exactly how to use the systems",
-        "Content strategy, offer-to-content alignment, hook writing & CTA building",
-        "Advanced content strategy and positioning",
-        "Step-by-step breakdown of how to create & schedule lead-generating content"
+        "On-demand video modules",
+        "Content strategy and positioning",
+        "Hook writing and conversion techniques"
       ]
     },
     {
       title: "One-on-One Support",
       items: [
-        "1:1 weekly consulting calls with Rohit",
-        "Deep dives into content performance, audience targeting, and funnel alignment",
-        "Hands-on help in building your ecosystem, optimizing messaging, and content flow",
-        "Asynchronous feedback inside private community or via Loom"
+        "Weekly consulting calls with Rohit",
+        "Performance optimization help",
+        "Community and async feedback"
       ]
     },
     {
       title: "Resources & Systems",
       items: [
-        "Notion dashboards to plan, organize, and execute your content",
-        "SOPs for idea extraction, script creation, editing, and publishing",
-        "Weekly content calendars and accountability check-ins",
-        "Support in connecting content to offer → funnel → booked calls"
+        "Notion dashboards and SOPs",
+        "Content calendars",
+        "Accountability check-ins"
       ]
     }
   ];
@@ -55,7 +51,7 @@ const WhatYouGetSection = () => {
       <div className="section-container">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-dm-serif text-foreground mb-6 fade-in">
-            What You Get with ClientsForge
+            What You Get with Clients Forge
           </h2>
         </div>
         
@@ -87,13 +83,10 @@ const WhatYouGetSection = () => {
 
         <div className="max-w-4xl mx-auto">
           <h3 className="text-3xl font-bold text-foreground font-dm-serif mb-8 text-center fade-in">
-            Program Details:
+            What We Do
           </h3>
           
           <div className="bg-card border border-card-border rounded-lg p-8 mb-8 fade-in">
-            <p className="text-lg text-foreground mb-6">
-              Here's what's included in our AI Content Ecosystem program:
-            </p>
             
             <ul className="space-y-3 mb-8">
               {programDetails.map((detail, index) => (

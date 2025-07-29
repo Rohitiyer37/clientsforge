@@ -23,6 +23,16 @@ const HeroSection = () => {
       
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Main Header */}
+          <div className="mb-20 fade-in">
+            <h1 className="text-4xl sm:text-5xl font-dm-serif text-foreground mb-6 leading-tight">
+              Build a Predictable Content Engine that Books Sales Calls — Without Burnout
+            </h1>
+            <p className="text-xl text-foreground-secondary leading-relaxed max-w-3xl mx-auto">
+              We install an AI-powered content ecosystem in your business so you can generate consistent inbound leads without constantly reinventing the content wheel.
+            </p>
+          </div>
+          
           <div className="mb-16 fade-in">
             <h2 className="text-3xl font-bold text-foreground mb-8">Step 1: Watch this video</h2>
             
@@ -45,10 +55,13 @@ const HeroSection = () => {
             <h2 className="text-3xl font-bold text-foreground mb-8">Step 2: Book a call</h2>
             <Button 
               onClick={() => window.open('https://calendly.com/iyerrohit645/discovery-call?month=2025-07', '_self')}
-              className="btn-primary text-xl px-10 py-5"
+              className="btn-primary text-xl px-10 py-5 mb-4"
             >
               Book a Free Call
             </Button>
+            <p className="text-foreground-secondary">
+              No hard pitch. Just a quick chat to see if you're a fit.
+            </p>
           </div>
         </div>
       </div>

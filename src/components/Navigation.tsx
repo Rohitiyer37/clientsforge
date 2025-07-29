@@ -19,7 +19,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="text-2xl font-dm-serif font-bold text-foreground">
-            ClientsForge
+            Clients Forge
           </div>
 
           {/* Navigation Links */}

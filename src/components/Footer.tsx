@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="section-container">
         <div className="text-center space-y-4">
           <div className="text-2xl font-dm-serif text-foreground mb-4">
-            ClientsForge
+            Clients Forge
           </div>
           
           <div className="flex flex-wrap justify-center items-center gap-6 text-foreground-secondary">
@@ -41,7 +41,7 @@ const Footer = () => {
           
           <div className="pt-8 border-t border-border">
             <p className="text-foreground-secondary text-sm">
-              © {new Date().getFullYear()} ClientsForge. All rights reserved.
+              © {new Date().getFullYear()} Clients Forge. All rights reserved.
             </p>
           </div>
         </div>
