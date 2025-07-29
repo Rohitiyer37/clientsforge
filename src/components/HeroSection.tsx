@@ -26,7 +26,8 @@ const HeroSection = () => {
           {/* Main Header */}
           <div className="mb-20 fade-in">
             <h1 className="text-4xl sm:text-5xl font-dm-serif text-foreground mb-6 leading-tight">
-              You Don't Need More Content, You Need a System
+              You Don't Need More Content,<br />
+              You Need a <span className="text-primary">System</span>
             </h1>
             <p className="text-xl text-foreground-secondary leading-relaxed max-w-3xl mx-auto">
               Most founders burn out trying to post more. We install a predictable content engine that does the heavy lifting by bringing you leads, sales calls, and clients on repeat.

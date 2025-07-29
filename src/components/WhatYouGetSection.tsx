@@ -59,10 +59,10 @@ const WhatYouGetSection = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="bg-card border border-card-border rounded-lg p-6 card-hover fade-in"
+              className="bg-card border border-card-border rounded-lg p-8 card-hover fade-in"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              <h3 className="text-xl font-bold text-foreground font-dm-serif mb-4">
+              <h3 className="text-2xl font-bold text-foreground font-dm-serif mb-4">
                 {feature.title}
               </h3>
               
@@ -70,7 +70,7 @@ const WhatYouGetSection = () => {
                 {feature.items.map((item, itemIndex) => (
                   <li 
                     key={itemIndex} 
-                    className="text-sm text-foreground-secondary flex items-start"
+                    className="text-base text-foreground-secondary flex items-start"
                   >
                     <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     {item}
@@ -82,7 +82,7 @@ const WhatYouGetSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-3xl font-bold text-foreground font-dm-serif mb-8 text-center fade-in">
+          <h3 className="text-4xl font-bold text-foreground font-dm-serif mb-8 text-center fade-in">
             What We Do
           </h3>
           

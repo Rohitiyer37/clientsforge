@@ -15,25 +15,25 @@ const TestimonialsSection = () => {
                 alt="200+ Calls Booked Results"
                 className="w-full h-auto rounded mb-4"
               />
-              <p className="text-sm text-foreground-secondary text-center">200+ Calls Booked</p>
+              <p className="text-lg text-foreground-secondary text-center">200+ Calls Booked</p>
             </div>
             
             <div className="bg-card border border-card-border rounded-lg p-8 fade-in" style={{ animationDelay: '150ms' }}>
-              <img 
-                src="/lovable-uploads/e766ef13-4ca0-407f-a45c-bb871de4c7f0.png" 
-                alt="Instagram Results"
-                className="w-full h-auto rounded mb-4"
-              />
-              <p className="text-sm text-foreground-secondary text-center">Instagram Growth Results</p>
-            </div>
-            
-            <div className="bg-card border border-card-border rounded-lg p-8 fade-in" style={{ animationDelay: '300ms' }}>
               <img 
                 src="/lovable-uploads/bceedcd9-64c6-4632-9553-80d603a6f30f.png" 
                 alt="YouTube Results"
                 className="w-full h-auto rounded mb-4"
               />
-              <p className="text-sm text-foreground-secondary text-center">YouTube Growth Results</p>
+              <p className="text-lg text-foreground-secondary text-center">YouTube Growth Results</p>
+            </div>
+            
+            <div className="bg-card border border-card-border rounded-lg p-8 fade-in" style={{ animationDelay: '300ms' }}>
+              <img 
+                src="/lovable-uploads/e766ef13-4ca0-407f-a45c-bb871de4c7f0.png" 
+                alt="Instagram Results"
+                className="w-3/4 h-auto rounded mb-4 mx-auto"
+              />
+              <p className="text-lg text-foreground-secondary text-center">Instagram Growth Results</p>
             </div>
           </div>
           
