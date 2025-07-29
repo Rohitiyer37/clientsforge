@@ -40,7 +40,7 @@ const Navigation = () => {
               onClick={() => scrollToSection('testimonials')}
               className="text-foreground-secondary hover:text-foreground transition-colors"
             >
-              Testimonials
+              Results
             </button>
             <button
               onClick={() => scrollToSection('contact')}
