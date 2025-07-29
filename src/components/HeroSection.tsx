@@ -26,10 +26,10 @@ const HeroSection = () => {
           {/* Main Header */}
           <div className="mb-20 fade-in">
             <h1 className="text-4xl sm:text-5xl font-dm-serif text-foreground mb-6 leading-tight">
-              Build a Predictable Content Engine that Books Sales Calls — Without Burnout
+              You Don't Need More Content, You Need a System
             </h1>
             <p className="text-xl text-foreground-secondary leading-relaxed max-w-3xl mx-auto">
-              We install an AI-powered content ecosystem in your business so you can generate consistent inbound leads without constantly reinventing the content wheel.
+              Most founders burn out trying to post more. We install a predictable content engine that does the heavy lifting by bringing you leads, sales calls, and clients on repeat.
             </p>
           </div>
           
