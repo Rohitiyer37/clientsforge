@@ -60,8 +60,11 @@ const HeroSection = () => {
             >
               Book a Free Call
             </Button>
-            <p className="text-foreground-secondary">
+            <p className="text-foreground-secondary mb-4">
               No hard pitch. Just a quick chat to see if you're a fit.
+            </p>
+            <p className="text-foreground-secondary text-sm">
+              Everything about this call will remain <span className="text-primary font-semibold">100% confidential</span>. We respect your privacy and services.
             </p>
           </div>
         </div>

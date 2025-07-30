@@ -8,31 +8,31 @@
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --background: 210 20% 97%; /* Softer off-white #f8f9fa */
-    --foreground: 220 9% 23%; /* Charcoal primary text #374151 */
-    --foreground-secondary: 220 9% 42%; /* Dark gray secondary text #6b7280 */
+    /* Core Brand Colors - Dark Theme */
+    --background: 0 0% 6%; /* Dark background #0f0f0f */
+    --foreground: 0 0% 100%; /* White primary text */
+    --foreground-secondary: 0 0% 96%; /* Light gray secondary text #f5f5f5 */
 
     /* Card & Surface Colors */
-    --card: 0 0% 100%; /* Pure white for cards */
-    --card-foreground: 220 9% 23%;
-    --card-border: 220 13% 90%; /* Light gray border #e5e7eb */
+    --card: 0 0% 10%; /* Dark cards #1a1a1a */
+    --card-foreground: 0 0% 100%;
+    --card-border: 0 0% 25%; /* Dark gray border #404040 */
 
-    /* Brand Colors */
-    --primary: 210 55% 22%; /* Darker blue accent #1d3557 */
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 210 55% 18%;
+    /* Brand Colors - Gold Accent */
+    --primary: 45 82% 37%; /* Gold accent #b08c14 */
+    --primary-foreground: 0 0% 6%; /* Dark text on gold */
+    --primary-hover: 45 82% 47%; /* Lighter gold on hover */
 
     /* Section Backgrounds */
-    --section-bg: 0 0% 100%; /* White sections for contrast */
-    --section-bg-alt: 210 20% 96%; /* Softer gray #f5f6f7 */
-    --section-fg: 220 9% 23%;
+    --section-bg: 0 0% 10%; /* Dark sections #1a1a1a */
+    --section-bg-alt: 0 0% 12%; /* Slightly lighter dark #1f1f1f */
+    --section-fg: 0 0% 100%;
 
     /* Interactive Elements */
-    --border: 220 13% 90%; /* #e5e7eb */
-    --border-light: 220 13% 85%; /* #d1d5db */
-    --input: 220 13% 90%;
-    --ring: 215 100% 60%;
+    --border: 0 0% 25%; /* #404040 */
+    --border-light: 0 0% 32%; /* #525252 */
+    --input: 0 0% 25%;
+    --ring: 45 82% 37%;
 
     --radius: 0.5rem;
 

@@ -31,7 +31,7 @@ const TestimonialsSection = () => {
               <img 
                 src="/lovable-uploads/e766ef13-4ca0-407f-a45c-bb871de4c7f0.png" 
                 alt="Instagram Results"
-                className="w-3/4 h-auto rounded mb-4 mx-auto"
+                className="w-1/2 h-auto rounded mb-4 mx-auto"
               />
               <p className="text-lg text-foreground-secondary text-center">Instagram Growth Results</p>
             </div>
