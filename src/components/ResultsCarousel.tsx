@@ -7,15 +7,15 @@ const ResultsCarousel = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
-    { src: "/lovable-uploads/9ee4174e-ae21-4411-9484-f1bf5200f51a.png", alt: "200+ Calls Booked Results" },
-    { src: "/lovable-uploads/3e209ade-6f80-4602-9c3e-6ffd443260a4.png", alt: "Instagram Analytics 1" },
-    { src: "/lovable-uploads/979356f6-1da8-42f1-bcd1-66b585163174.png", alt: "Instagram Analytics 2" },
-    { src: "/lovable-uploads/ddc3013b-b0e8-46c8-851e-566727400b35.png", alt: "YouTube Analytics 1" },
-    { src: "/lovable-uploads/4dd367c3-bfdc-40db-94c4-12e97db07edc.png", alt: "YouTube Analytics 2" },
-    { src: "/lovable-uploads/98ef5a7e-efba-413e-b821-8c1c7e3560c8.png", alt: "YouTube Analytics 3" },
-    { src: "/lovable-uploads/57c79ba0-4e97-4ddb-868f-bd1ce97ea211.png", alt: "YouTube Analytics 4" },
-    { src: "/lovable-uploads/3e9fc74a-1d3e-47ac-a88d-f4a8cb90e580.png", alt: "YouTube Analytics 5" },
-    { src: "/lovable-uploads/4827a4f1-03d2-45d6-8d8f-821eaa48ea7b.png", alt: "YouTube Analytics 6" },
+    { src: "/lovable-uploads/0b35a267-7579-4049-bde7-bcbb8a2395d7.png", alt: "Calls Booked Results" },
+    { src: "/lovable-uploads/e6569732-c0a6-46c2-b347-bb352c3a2e4a.png", alt: "Instagram Analytics 1" },
+    { src: "/lovable-uploads/51dd9a2b-7669-4c8f-b5da-b07b7f299dc3.png", alt: "Instagram Analytics 2" },
+    { src: "/lovable-uploads/5f50fe35-9cba-4a96-ab31-976564b47edd.png", alt: "YouTube Analytics 1" },
+    { src: "/lovable-uploads/74314ac1-eceb-41f0-ae27-fee4ba21ea0d.png", alt: "YouTube Analytics 2" },
+    { src: "/lovable-uploads/452d6a45-355c-454e-bc61-4a1abeb1b7e3.png", alt: "YouTube Analytics 3" },
+    { src: "/lovable-uploads/1d753d58-5480-4a40-a24a-6f4feb940321.png", alt: "YouTube Analytics 4" },
+    { src: "/lovable-uploads/55dfa06f-b924-43b8-adb5-f6f19243378d.png", alt: "YouTube Analytics 5" },
+    { src: "/lovable-uploads/ab98ef21-ad07-4633-a7cf-c51169342d29.png", alt: "YouTube Analytics 6" },
   ];
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const ResultsCarousel = () => {
                   <img 
                     src={image.src} 
                     alt={image.alt}
-                    className="w-full h-48 object-cover rounded shadow-lg"
+                    className="w-full h-64 object-contain rounded shadow-lg"
                   />
                 </div>
               </CarouselItem>

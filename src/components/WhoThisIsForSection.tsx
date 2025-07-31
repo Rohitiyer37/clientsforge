@@ -4,14 +4,14 @@ const WhoThisIsForSection = () => {
       <div className="section-container">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-dm-serif text-foreground mb-16 text-center fade-in">
-            ⚡ Who We Help
+            Who We Help
           </h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
             {/* Who This Is For - Left Column */}
             <div className="fade-in">
               <h3 className="text-2xl font-bold text-accent mb-6">
-                ⚡ Who This Is For
+                Who This Is For
               </h3>
               <p className="text-lg text-foreground mb-6">
                 We work with agency owners, coaches, and consultants who are:
@@ -48,7 +48,7 @@ const WhoThisIsForSection = () => {
             {/* Who This Is Not For - Right Column */}
             <div className="fade-in" style={{ animationDelay: '200ms' }}>
               <h3 className="text-2xl font-bold text-accent mb-6">
-                🚫 Who This Is Not For
+                Who This Is Not For
               </h3>
               <p className="text-lg text-foreground mb-6">
                 This isn't for you if:
