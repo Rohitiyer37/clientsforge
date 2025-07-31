@@ -1,22 +1,26 @@
 import { useState, useEffect } from 'react';
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 
 const ResultsCarousel = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
-    { src: "/lovable-uploads/0b35a267-7579-4049-bde7-bcbb8a2395d7.png", alt: "Calls Booked Results" },
-    { src: "/lovable-uploads/e6569732-c0a6-46c2-b347-bb352c3a2e4a.png", alt: "Instagram Analytics 1" },
-    { src: "/lovable-uploads/51dd9a2b-7669-4c8f-b5da-b07b7f299dc3.png", alt: "Instagram Analytics 2" },
-    { src: "/lovable-uploads/5f50fe35-9cba-4a96-ab31-976564b47edd.png", alt: "YouTube Analytics 1" },
-    { src: "/lovable-uploads/74314ac1-eceb-41f0-ae27-fee4ba21ea0d.png", alt: "YouTube Analytics 2" },
-    { src: "/lovable-uploads/452d6a45-355c-454e-bc61-4a1abeb1b7e3.png", alt: "YouTube Analytics 3" },
-    { src: "/lovable-uploads/1d753d58-5480-4a40-a24a-6f4feb940321.png", alt: "YouTube Analytics 4" },
-    { src: "/lovable-uploads/55dfa06f-b924-43b8-adb5-f6f19243378d.png", alt: "YouTube Analytics 5" },
-    { src: "/lovable-uploads/ab98ef21-ad07-4633-a7cf-c51169342d29.png", alt: "YouTube Analytics 6" },
+    // First row - 5 images
+    { src: "/lovable-uploads/18e2fe42-ab54-46a7-850d-4c393d6f1feb.png", alt: "Calls Booked Results" },
+    { src: "/lovable-uploads/b7bcf230-1750-45e2-b791-89d9340eb80d.png", alt: "Instagram Analytics 1" },
+    { src: "/lovable-uploads/1384937a-175c-47d5-8923-4d239386af42.png", alt: "Instagram Analytics 2" },
+    { src: "/lovable-uploads/85e827fe-7d05-429e-bc9c-fc154a7ddc82.png", alt: "YouTube Analytics 1" },
+    { src: "/lovable-uploads/ef799771-ef68-401a-93b8-a1a8697a1184.png", alt: "YouTube Analytics 2" },
+    
+    // Second row - 4 images
+    { src: "/lovable-uploads/b55d0fad-9e00-4df3-ba88-c9f64723ac29.png", alt: "YouTube Analytics 3" },
+    { src: "/lovable-uploads/f10a2d4f-5566-466a-b89c-80db828ffbfe.png", alt: "YouTube Analytics 4" },
+    { src: "/lovable-uploads/d91a1233-a9f7-466b-a66e-0e3aafef9597.png", alt: "YouTube Analytics 5" },
+    { src: "/lovable-uploads/1d9d0e4d-7c31-404b-b830-8479658aff63.png", alt: "YouTube Analytics 6" },
   ];
+
+  const firstRowImages = images.slice(0, 5);
+  const secondRowImages = images.slice(5, 9);
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -29,34 +33,49 @@ const ResultsCarousel = () => {
     return () => document.removeEventListener('keydown', handleEscape);
   }, []);
 
+  const ImageRow = ({ images, direction = 'left' }: { images: typeof firstRowImages, direction?: 'left' | 'right' }) => (
+    <div className="relative overflow-hidden">
+      <div className={`flex space-x-4 ${direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right'}`}>
+        {/* Original images */}
+        {images.map((image, index) => (
+          <div 
+            key={`original-${index}`}
+            className="flex-shrink-0 cursor-pointer hover:scale-105 transition-transform duration-300"
+            onClick={() => setSelectedImage(image.src)}
+          >
+            <img 
+              src={image.src} 
+              alt={image.alt}
+              className="h-80 w-auto object-contain rounded shadow-lg"
+            />
+          </div>
+        ))}
+        {/* Duplicate images for seamless loop */}
+        {images.map((image, index) => (
+          <div 
+            key={`duplicate-${index}`}
+            className="flex-shrink-0 cursor-pointer hover:scale-105 transition-transform duration-300"
+            onClick={() => setSelectedImage(image.src)}
+          >
+            <img 
+              src={image.src} 
+              alt={image.alt}
+              className="h-80 w-auto object-contain rounded shadow-lg"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
   return (
     <>
-      <div className="w-full overflow-hidden">
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-            dragFree: true,
-          }}
-          className="w-full"
-        >
-          <CarouselContent className="-ml-2 md:-ml-4 animate-scroll">
-            {images.map((image, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div 
-                  className="cursor-pointer hover:scale-105 transition-transform duration-300"
-                  onClick={() => setSelectedImage(image.src)}
-                >
-                  <img 
-                    src={image.src} 
-                    alt={image.alt}
-                    className="w-full h-64 object-contain rounded shadow-lg"
-                  />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+      <div className="w-full space-y-6">
+        {/* First Row - 5 images scrolling left */}
+        <ImageRow images={firstRowImages} direction="left" />
+        
+        {/* Second Row - 4 images scrolling right */}
+        <ImageRow images={secondRowImages} direction="right" />
       </div>
 
       {/* Modal */}
@@ -83,7 +102,7 @@ const ResultsCarousel = () => {
       )}
 
       <style>{`
-        @keyframes scroll {
+        @keyframes scroll-left {
           0% {
             transform: translateX(0);
           }
@@ -92,11 +111,25 @@ const ResultsCarousel = () => {
           }
         }
         
-        .animate-scroll {
-          animation: scroll 20s linear infinite;
+        @keyframes scroll-right {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(0);
+          }
         }
         
-        .animate-scroll:hover {
+        .animate-scroll-left {
+          animation: scroll-left 30s linear infinite;
+        }
+        
+        .animate-scroll-right {
+          animation: scroll-right 30s linear infinite;
+        }
+        
+        .animate-scroll-left:hover,
+        .animate-scroll-right:hover {
           animation-play-state: paused;
         }
       `}</style>
