@@ -4,7 +4,7 @@ const WhoThisIsForSection = () => {
       <div className="section-container">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-dm-serif text-foreground mb-16 text-center fade-in">
-            ⚡ Who This Is For
+            ⚡ Who We Help
           </h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -19,27 +19,27 @@ const WhoThisIsForSection = () => {
               
               <ul className="space-y-3 text-foreground-secondary">
                 <li className="flex items-start">
-                  <span className="text-accent mr-3 mt-1">✔</span>
+                  <span className="text-accent mr-3 mt-1">✓</span>
                   Already generating $3,000+/month in revenue
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent mr-3 mt-1">✔</span>
+                  <span className="text-accent mr-3 mt-1">✓</span>
                   Selling a validated offer that's already converting
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent mr-3 mt-1">✔</span>
+                  <span className="text-accent mr-3 mt-1">✓</span>
                   Struggling with execution, consistency, or content strategy
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent mr-3 mt-1">✔</span>
+                  <span className="text-accent mr-3 mt-1">✓</span>
                   Tired of relying on referrals or cold outreach
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent mr-3 mt-1">✔</span>
+                  <span className="text-accent mr-3 mt-1">✓</span>
                   Ready to install a predictable, AI-powered content system
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent mr-3 mt-1">✔</span>
+                  <span className="text-accent mr-3 mt-1">✓</span>
                   Open to using automation to scale their inbound leads and booked calls
                 </li>
               </ul>
@@ -56,19 +56,19 @@ const WhoThisIsForSection = () => {
               
               <ul className="space-y-3 text-foreground-secondary">
                 <li className="flex items-start">
-                  <span className="text-red-500 mr-3 mt-1">❌</span>
+                  <span className="text-red-500 mr-3 mt-1">✗</span>
                   You're just getting started with no revenue or untested offer
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-500 mr-3 mt-1">❌</span>
+                  <span className="text-red-500 mr-3 mt-1">✗</span>
                   You run a web development, recruitment, or fitness coaching business
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-500 mr-3 mt-1">❌</span>
+                  <span className="text-red-500 mr-3 mt-1">✗</span>
                   You're looking for quick hacks instead of systems
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-500 mr-3 mt-1">❌</span>
+                  <span className="text-red-500 mr-3 mt-1">✗</span>
                   You're not willing to take consistent action
                 </li>
               </ul>
