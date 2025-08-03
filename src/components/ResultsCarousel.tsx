@@ -74,14 +74,14 @@ const ResultsCarousel = () => {
   return (
     <>
       <div className="w-full space-y-6">
-        {/* First Row - 3 images scrolling left */}
-        <ImageRow images={firstRowImages} direction="left" />
-        
-        {/* Second Row - 3 images scrolling right */}
-        <ImageRow images={secondRowImages} direction="right" />
-        
-        {/* Third Row - 3 images scrolling left */}
+        {/* Third Row - 3 images scrolling left (now first) */}
         <ImageRow images={thirdRowImages} direction="left" />
+        
+        {/* First Row - 3 images scrolling right */}
+        <ImageRow images={firstRowImages} direction="right" />
+        
+        {/* Second Row - 3 images scrolling left */}
+        <ImageRow images={secondRowImages} direction="left" />
       </div>
 
       {/* Modal */}

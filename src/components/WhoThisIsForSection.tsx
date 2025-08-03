@@ -8,12 +8,12 @@ const WhoThisIsForSection = () => {
           </h2>
           
           <div className="max-w-5xl mx-auto fade-in">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-4">
               <div>
                 <h3 className="text-2xl font-bold text-accent mb-6 text-center">
                   Who This Is For
                 </h3>
-                <p className="text-lg text-foreground mb-6">
+                <p className="text-lg text-foreground mb-2">
                   We work with agency owners, coaches, and consultants who are:
                 </p>
               </div>
@@ -21,7 +21,7 @@ const WhoThisIsForSection = () => {
                 <h3 className="text-2xl font-bold text-accent mb-6 text-center">
                   Who This Is Not For
                 </h3>
-                <p className="text-lg text-foreground mb-6">
+                <p className="text-lg text-foreground mb-2">
                   This isn't for you if:
                 </p>
               </div>
