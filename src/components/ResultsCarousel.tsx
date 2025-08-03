@@ -5,22 +5,22 @@ const ResultsCarousel = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
-    // First row - 5 images
-    { src: "/lovable-uploads/18e2fe42-ab54-46a7-850d-4c393d6f1feb.png", alt: "Calls Booked Results" },
-    { src: "/lovable-uploads/b7bcf230-1750-45e2-b791-89d9340eb80d.png", alt: "Instagram Analytics 1" },
-    { src: "/lovable-uploads/1384937a-175c-47d5-8923-4d239386af42.png", alt: "Instagram Analytics 2" },
-    { src: "/lovable-uploads/85e827fe-7d05-429e-bc9c-fc154a7ddc82.png", alt: "YouTube Analytics 1" },
-    { src: "/lovable-uploads/ef799771-ef68-401a-93b8-a1a8697a1184.png", alt: "YouTube Analytics 2" },
+    // First row - 4 images
+    { src: "/lovable-uploads/b7fe1636-39e8-483f-9b30-3317f217be08.png", alt: "Calls Booked Results" },
+    { src: "/lovable-uploads/b6f889fe-229c-4ea4-87c9-bfacedf87414.png", alt: "Instagram Analytics 1" },
+    { src: "/lovable-uploads/2f0c457c-2c67-40a2-932b-584e21a0b93b.png", alt: "Instagram Analytics 2" },
+    { src: "/lovable-uploads/60ccd4b7-ea20-472d-8f69-d5e8626703a8.png", alt: "Instagram Analytics 3" },
     
-    // Second row - 4 images
-    { src: "/lovable-uploads/b55d0fad-9e00-4df3-ba88-c9f64723ac29.png", alt: "YouTube Analytics 3" },
-    { src: "/lovable-uploads/f10a2d4f-5566-466a-b89c-80db828ffbfe.png", alt: "YouTube Analytics 4" },
-    { src: "/lovable-uploads/d91a1233-a9f7-466b-a66e-0e3aafef9597.png", alt: "YouTube Analytics 5" },
-    { src: "/lovable-uploads/1d9d0e4d-7c31-404b-b830-8479658aff63.png", alt: "YouTube Analytics 6" },
+    // Second row - 5 images
+    { src: "/lovable-uploads/41ce6286-e556-43de-90f0-f0435c9109f2.png", alt: "YouTube Analytics 1" },
+    { src: "/lovable-uploads/3f50505b-b170-4fe8-b5ed-6760bff96fe0.png", alt: "YouTube Analytics 2" },
+    { src: "/lovable-uploads/4908240e-df8e-4f3a-957c-eb85588ccefd.png", alt: "YouTube Analytics 3" },
+    { src: "/lovable-uploads/f67ca87c-6d9f-4e95-850b-e96fca326d2d.png", alt: "YouTube Analytics 4" },
+    { src: "/lovable-uploads/074c7f1e-335c-415d-a9e4-3fc389ae4982.png", alt: "YouTube Analytics 5" },
   ];
 
-  const firstRowImages = images.slice(0, 5);
-  const secondRowImages = images.slice(5, 9);
+  const firstRowImages = images.slice(0, 4);
+  const secondRowImages = images.slice(4, 9);
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -46,7 +46,7 @@ const ResultsCarousel = () => {
             <img 
               src={image.src} 
               alt={image.alt}
-              className="h-80 w-auto object-contain rounded shadow-lg"
+              className="h-80 w-auto object-contain rounded-lg shadow-lg"
             />
           </div>
         ))}
@@ -60,7 +60,7 @@ const ResultsCarousel = () => {
             <img 
               src={image.src} 
               alt={image.alt}
-              className="h-80 w-auto object-contain rounded shadow-lg"
+              className="h-80 w-auto object-contain rounded-lg shadow-lg"
             />
           </div>
         ))}

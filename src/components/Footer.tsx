@@ -30,12 +30,12 @@ const Footer = () => {
             </a>
             <span className="hidden sm:block">•</span>
             <a 
-              href="https://linkedin.com/in/rohit-iyer" 
+              href="https://www.instagram.com/rohittiyerr/" 
               className="hover:text-primary transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn
+              Instagram
             </a>
           </div>
           
