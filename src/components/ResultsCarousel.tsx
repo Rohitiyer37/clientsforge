@@ -5,22 +5,25 @@ const ResultsCarousel = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
-    // First row - 4 images
-    { src: "/lovable-uploads/b7fe1636-39e8-483f-9b30-3317f217be08.png", alt: "Calls Booked Results" },
-    { src: "/lovable-uploads/b6f889fe-229c-4ea4-87c9-bfacedf87414.png", alt: "Instagram Analytics 1" },
-    { src: "/lovable-uploads/2f0c457c-2c67-40a2-932b-584e21a0b93b.png", alt: "Instagram Analytics 2" },
-    { src: "/lovable-uploads/60ccd4b7-ea20-472d-8f69-d5e8626703a8.png", alt: "Instagram Analytics 3" },
+    // First row - 3 images
+    { src: "/lovable-uploads/d8d83592-ab7e-4e04-9539-fa206a105911.png", alt: "YouTube Analytics 1" },
+    { src: "/lovable-uploads/09083f1f-22fc-4e77-96ca-e48d72d101f4.png", alt: "YouTube Analytics 2" },
+    { src: "/lovable-uploads/7555b7e1-1a62-4e47-a205-3fbcac16174c.png", alt: "Subscriber Growth" },
     
-    // Second row - 5 images
-    { src: "/lovable-uploads/41ce6286-e556-43de-90f0-f0435c9109f2.png", alt: "YouTube Analytics 1" },
-    { src: "/lovable-uploads/3f50505b-b170-4fe8-b5ed-6760bff96fe0.png", alt: "YouTube Analytics 2" },
-    { src: "/lovable-uploads/4908240e-df8e-4f3a-957c-eb85588ccefd.png", alt: "YouTube Analytics 3" },
-    { src: "/lovable-uploads/f67ca87c-6d9f-4e95-850b-e96fca326d2d.png", alt: "YouTube Analytics 4" },
-    { src: "/lovable-uploads/074c7f1e-335c-415d-a9e4-3fc389ae4982.png", alt: "YouTube Analytics 5" },
+    // Second row - 3 images
+    { src: "/lovable-uploads/7c89aa33-fddb-42d2-a780-3c564b13a8bd.png", alt: "Views Growth" },
+    { src: "/lovable-uploads/ccc8f258-ae0b-4698-a236-6b94634dd4d3.png", alt: "YouTube Analytics 3" },
+    { src: "/lovable-uploads/35681698-c182-43c1-af55-177e64e79f97.png", alt: "YouTube Analytics 4" },
+    
+    // Third row - 3 images
+    { src: "/lovable-uploads/7479291b-a575-498a-9c61-abf958680c7b.png", alt: "Instagram Analytics 1" },
+    { src: "/lovable-uploads/090837b4-59d2-4e11-bc82-cfb9f05f6ab2.png", alt: "Instagram Analytics 2" },
+    { src: "/lovable-uploads/624e5383-eb53-4631-966f-0839e3cea563.png", alt: "Calls Booked Results" },
   ];
 
-  const firstRowImages = images.slice(0, 4);
-  const secondRowImages = images.slice(4, 9);
+  const firstRowImages = images.slice(0, 3);
+  const secondRowImages = images.slice(3, 6);
+  const thirdRowImages = images.slice(6, 9);
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -71,11 +74,14 @@ const ResultsCarousel = () => {
   return (
     <>
       <div className="w-full space-y-6">
-        {/* First Row - 5 images scrolling left */}
+        {/* First Row - 3 images scrolling left */}
         <ImageRow images={firstRowImages} direction="left" />
         
-        {/* Second Row - 4 images scrolling right */}
+        {/* Second Row - 3 images scrolling right */}
         <ImageRow images={secondRowImages} direction="right" />
+        
+        {/* Third Row - 3 images scrolling left */}
+        <ImageRow images={thirdRowImages} direction="left" />
       </div>
 
       {/* Modal */}
