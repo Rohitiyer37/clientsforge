@@ -39,19 +39,18 @@ const HeroSection = () => {
             
             {/* Wistia Video */}
             <div id="video-section" className="max-w-[700px] mx-auto mb-12">
-              <script src="https://fast.wistia.com/player.js" async></script>
-              <script src="https://fast.wistia.com/embed/3n318t7jki.js" async type="module"></script>
-              <style dangerouslySetInnerHTML={{
-                __html: `
-                  wistia-player[media-id='3n318t7jki']:not(:defined) { 
-                    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/3n318t7jki/swatch'); 
-                    display: block; 
-                    filter: blur(5px); 
-                    padding-top: 56.25%; 
-                  }
-                `
-              }} />
-              <wistia-player media-id="3n318t7jki" aspect="1.7777777777777777"></wistia-player>
+              <iframe 
+                src="https://fast.wistia.net/embed/iframe/3n318t7jki" 
+                title="VSL Video" 
+                allowTransparency={true}
+                frameBorder={0}
+                scrolling="no" 
+                className="wistia_embed w-full h-[394px] rounded-xl" 
+                name="wistia_embed" 
+                allowFullScreen 
+                width="700" 
+                height="394">
+              </iframe>
             </div>
           </div>
           
