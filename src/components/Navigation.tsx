@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
+
 const Navigation = () => {
   const handleBookCall = () => {
     window.open('https://calendly.com/iyerrohit645/discovery-call?month=2025-07', '_self');
@@ -18,8 +19,11 @@ const Navigation = () => {
       <div className="section-container">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <div className="text-2xl font-dm-serif font-bold text-foreground">
-            Clients Forge
+          <div className="flex items-center space-x-3">
+            <img src="/lovable-uploads/ce9ad859-5eca-49d1-84e1-fc02da6e3efd.png" alt="Clients Forge Logo" className="w-8 h-8" />
+            <div className="text-2xl font-dm-serif font-bold text-foreground">
+              Clients Forge
+            </div>
           </div>
 
           {/* Navigation Links */}

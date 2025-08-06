@@ -37,18 +37,21 @@ const HeroSection = () => {
           <div className="mb-16 fade-in">
             <h2 className="text-3xl font-bold text-foreground mb-8">Step 1: Watch this video</h2>
             
-            {/* VSL Placeholder */}
+            {/* Wistia Video */}
             <div id="video-section" className="max-w-[700px] mx-auto mb-12">
-              <div className="relative bg-section border-2 border-dashed border-border-light rounded-xl p-12 text-center" style={{ minHeight: '350px' }}>
-                <div className="flex flex-col items-center justify-center h-full">
-                  <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mb-8">
-                    <Play className="w-10 h-10 text-primary-foreground ml-1" />
-                  </div>
-                  <p className="text-3xl font-semibold text-foreground-secondary">
-                    Video Coming Soon
-                  </p>
-                </div>
-              </div>
+              <script src="https://fast.wistia.com/player.js" async></script>
+              <script src="https://fast.wistia.com/embed/uerg9caspr.js" async type="module"></script>
+              <style dangerouslySetInnerHTML={{
+                __html: `
+                  wistia-player[media-id='uerg9caspr']:not(:defined) { 
+                    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/uerg9caspr/swatch'); 
+                    display: block; 
+                    filter: blur(5px); 
+                    padding-top: 56.25%; 
+                  }
+                `
+              }} />
+              <wistia-player media-id="uerg9caspr" aspect="1.7777777777777777"></wistia-player>
             </div>
           </div>
           
