@@ -20,7 +20,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img src="/lovable-uploads/ce9ad859-5eca-49d1-84e1-fc02da6e3efd.png" alt="Clients Forge Logo" className="w-8 h-8" />
+            <img src="/lovable-uploads/ce9ad859-5eca-49d1-84e1-fc02da6e3efd.png" alt="Clients Forge Logo" className="w-12 h-12" />
             <div className="text-2xl font-dm-serif font-bold text-foreground">
               Clients Forge
             </div>
