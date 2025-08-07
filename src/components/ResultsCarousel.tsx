@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-import { X } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const ResultsCarousel = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [mobileCurrentIndex, setMobileCurrentIndex] = useState({ row1: 0, row2: 0, row3: 0 });
 
   const images = [
     // First row - 3 images
@@ -36,9 +37,30 @@ const ResultsCarousel = () => {
     return () => document.removeEventListener('keydown', handleEscape);
   }, []);
 
-  const ImageRow = ({ images, direction = 'left' }: { images: typeof firstRowImages, direction?: 'left' | 'right' }) => (
+  const handleMobileNavigation = (rowKey: 'row1' | 'row2' | 'row3', direction: 'prev' | 'next') => {
+    setMobileCurrentIndex(prev => {
+      const currentIndex = prev[rowKey];
+      const maxIndex = 2; // 3 images, so index 0-2
+      
+      let newIndex;
+      if (direction === 'next') {
+        newIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+      } else {
+        newIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
+      }
+      
+      return { ...prev, [rowKey]: newIndex };
+    });
+  };
+
+  const ImageRow = ({ images, direction = 'left', rowKey }: { 
+    images: typeof firstRowImages, 
+    direction?: 'left' | 'right',
+    rowKey: 'row1' | 'row2' | 'row3'
+  }) => (
     <div className="relative overflow-hidden">
-      <div className={`flex space-x-4 ${direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right'}`}>
+      {/* Desktop auto-scrolling layout */}
+      <div className={`hidden md:flex space-x-4 ${direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right'}`}>
         {/* Original images */}
         {images.map((image, index) => (
           <div 
@@ -68,6 +90,57 @@ const ResultsCarousel = () => {
           </div>
         ))}
       </div>
+
+      {/* Mobile layout with navigation arrows */}
+      <div className="md:hidden relative">
+        {/* Left Arrow */}
+        <button
+          onClick={() => handleMobileNavigation(rowKey, 'prev')}
+          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border border-border rounded-full p-2 hover:bg-background/90 transition-colors"
+          aria-label="Previous image"
+        >
+          <ChevronLeft className="h-4 w-4 text-foreground" />
+        </button>
+
+        {/* Right Arrow */}
+        <button
+          onClick={() => handleMobileNavigation(rowKey, 'next')}
+          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border border-border rounded-full p-2 hover:bg-background/90 transition-colors"
+          aria-label="Next image"
+        >
+          <ChevronRight className="h-4 w-4 text-foreground" />
+        </button>
+
+        {/* Single image display */}
+        <div className="flex justify-center">
+          <div 
+            className="cursor-pointer hover:scale-105 transition-transform duration-300"
+            onClick={() => setSelectedImage(images[mobileCurrentIndex[rowKey]].src)}
+          >
+            <img 
+              src={images[mobileCurrentIndex[rowKey]].src} 
+              alt={images[mobileCurrentIndex[rowKey]].alt}
+              className="h-80 w-auto object-contain rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+
+        {/* Dots indicator */}
+        <div className="flex justify-center mt-4 space-x-2">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setMobileCurrentIndex(prev => ({ ...prev, [rowKey]: index }))}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                index === mobileCurrentIndex[rowKey] 
+                  ? 'bg-primary' 
+                  : 'bg-muted-foreground/30'
+              }`}
+              aria-label={`Go to image ${index + 1}`}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 
@@ -75,13 +148,13 @@ const ResultsCarousel = () => {
     <>
       <div className="w-full space-y-6">
         {/* Third Row - 3 images scrolling left (now first) */}
-        <ImageRow images={thirdRowImages} direction="left" />
+        <ImageRow images={thirdRowImages} direction="left" rowKey="row3" />
         
         {/* First Row - 3 images scrolling right */}
-        <ImageRow images={firstRowImages} direction="right" />
+        <ImageRow images={firstRowImages} direction="right" rowKey="row1" />
         
         {/* Second Row - 3 images scrolling left */}
-        <ImageRow images={secondRowImages} direction="left" />
+        <ImageRow images={secondRowImages} direction="left" rowKey="row2" />
       </div>
 
       {/* Modal */}
